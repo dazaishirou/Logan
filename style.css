@@ -1,0 +1,555 @@
+body { background-image:url("https://i.imgur.com/QgkjR2K.gif"),url(https://i.imgur.com/sZg67p5.gif);
+  font: 500 13px open sans;
+  color: var(--light1);
+  background-color: #111;
+ 
+
+  background-position: center center;
+  position: relative;
+  background-attachment: fixed;
+  font-kerning: normal;
+}
+:root {
+  --main1: #efb810;
+  --main2: #efb810;
+  --maing1: 221, 235, 51;
+  --maing2: 221, 235, 51;
+
+  --border1: #efb810 ;
+
+  --dark: #1f1f1f;
+  --dark1: #222;
+  --dark2: #333;
+  --light1: #ddd;
+  --light2: #ccc;
+
+  --bonia: "hello bonia serif";
+}
+@font-face {
+  font-family: "qastars";
+  src: url(https://files.jcink.net/uploads2/entrxpy/FONTS/Qastars.ttf);
+}
+
+GROUP4,
+.staff,
+#g4,
+.p4,
+GROUP6,
+.member,
+#g6,
+.p6,
+GROUP3,
+.unregistered,
+#g3,
+.p3,
+GROUP2,
+.guests,
+#g2,
+.p2 {
+  --main1:#fefefe ;
+  --main2: #ba5536;
+  --main3: #693d3d;
+  --maing1: 221, 235, 51;
+  --maing2: 186, 85, 54;
+}
+
+
+
+
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--dark1);
+}
+body::-webkit-scrollbar-thumb {
+  border: 7px solid var(--dark1);
+  background: var(--main1);
+}
+
+#wrapper {
+  width: 1300px;
+  margin: 20px auto;
+  box-shadow: 0 0 17px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--border1);
+}
+
+
+#innerwrapper {
+  background: var(--dark1);
+}
+
+/* header + board structure */
+
+.frontier-header {
+  border-bottom: 1px solid var(--border1);
+  position: relative;
+  width: 100%;
+  background: radial-gradient(
+    circle at top left,
+    var(--dark1) 0%,
+    rgba(var(--maing1), 0.7) 300%
+  );
+  overflow: hidden;
+  height: 695px;
+}
+.frontier-header .tophead {
+  width: 100%;
+  height: 30px;
+}
+.tophead .hellouser {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tophead .hellouser .userav {
+  margin-left: 10px;
+  margin-right: 30px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  border: 7px solid var(--main1);
+}
+.tophead .hellouser .userav img {
+  filter: grayscale(60%) contrast(70%);
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+.tophead .hellouser h1 {
+  margin-top: 30px;
+  color: var(--main1);
+  letter-spacing: 1px;
+  text-align: right;
+  font: 900 25px/0px var(--bonia);
+}
+.tophead .hellouser h1 b u {
+  font-weight: 900;
+  font-size: 18px;
+  font-family: var(--bonia);
+  color: var(--main1);
+  text-decoration: none;
+}
+.tophead .hellouser h1 b {
+  display: block;
+  text-transform: uppercase;
+  color: var(--light2);
+  margin-top: 15px;
+  text-align: right;
+  font: 700 12px open sans;
+}
+
+.frontier-header .header-1 {
+  border-top: 1px solid var(--border1);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin: 65px auto;
+  height: 600px;
+  background: var(--main1);
+}
+.frontier-header .header-1 .header-1-img:before {
+  content: "";
+  position: absolute;
+  top: 6660;
+  right: 0;
+  height: 600px;
+  width: 1300px;
+  background: linear-gradient(
+    to top,
+    rgba(var(--maing1), 0.2),
+    rgba(var(--maing2), 0.030)
+  );
+  backdrop-filter: grayscale(0%);
+}
+.frontier-header .header-1 .header-1-img {
+  position: relative;
+  z-index: 20;
+}
+.frontier-header .header-1 .header-1-img img {
+  width: 1300px;
+  height: 600px;
+}
+.frontier-header .header-1 h1 {
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  right: 60px;
+  z-index: 99;
+  text-shadow: -2px 2px 0px var(--main1);
+  color: #1f1f1f;
+  font: 900 130px var(--bonia);
+}
+.frontier-header .header-1 .site-desc {
+  position: absolute;
+  z-index: 99;
+  bottom: 30px;
+  right: 60px;
+  width: 640px;
+  padding: 20px 25px;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--main1);
+  outline: 1px solid var(--main1);
+  outline-offset: -7px;
+  color: var(--light1);
+  text-align: justify;
+  font: 500 13px/200% open sans;
+}
+
+#navbar {
+  position: sticky;
+  top: -1px;
+  z-index: 9999999999;
+  width: 100%;
+  height: 45px;
+  background: var(--dark);
+  border-bottom: 1px solid var(--border1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  color: #444;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+#navbar a:first-of-type {
+  margin-right: 10px;
+  margin-left: 30px;
+  color: var(--dark);
+  padding: 2px 10px;
+  outline: 1px solid var(--main1);
+  outline-offset: 3px;
+  font: 900 14px lora;
+  letter-spacing: 2.5px;
+  background: var(--main1);
+}
+#navbar a:first-of-type:after {
+  content: "";
+  display: none;
+}
+#navbar a:after {
+  content: "✦︎";
+  font-size: 17px;
+  margin-left: 10px;
+  font-weight: 900;
+  color: var(--main1);
+}
+#navbar a {
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--light1);
+  font: 900 13px/120% open sans;
+}
+.sitestuff-bar {
+  position: relative;
+  z-index: 999999999;
+  overflow: hidden;
+  height: 190px;
+  width: 100%;
+  border-bottom: 1px solid var(--border1);
+  background: var(--dark1);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sitestuff-bar .site-userr {
+  height: 150px;
+  width: 430px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sitestuff-bar .site-userr .user-links-1 {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sitestuff-bar .site-userr .user-links {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sitestuff-bar .user-links a i,
+.sitestuff-bar .user-links-1 a i {
+  font-size: 20px;
+  display: block;
+  color: var(--light2);
+}
+.sitestuff-bar .site-userr .user-links a:hover,
+.sitestuff-bar .site-userr .user-links-1 a:hover {
+  background-color: rgba(var(--maing1), 0.9);
+  outline: 1px solid rgba(var(--maing1), 0.9);
+  outline-offset: 6px;
+}
+.sitestuff-bar .site-userr .user-links a,
+.sitestuff-bar .site-userr .user-links-1 a {
+  transition: 0.9s;
+  outline: 1px solid rgba(var(--maing1), 0.25);
+  outline-offset: 3px;
+  border-radius: 100%;
+  text-decoration: none;
+  color: var(--dark);
+  height: 15px;
+  width: 15px;
+  background-color: rgba(var(--maing1), 0.4);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sitestuff-bar .site-userr ico {
+  opacity: 0.15;
+  filter: drop-shadow(0px 0px 10px rgba(var(--maing1), 1));
+  color: var(--main1);
+  position: absolute;
+  top: -90px;
+  z-index: 1;
+  font-size: 220px;
+}
+.sitestuff-bar .site-userr h2 {
+  margin-top: 0px;
+  letter-spacing: 1px;
+  font: 600 13px/10px open sans;
+  text-transform: uppercase;
+}
+.sitestuff-bar .site-userr h1 {
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  color: var(--main1);
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font: 700 17px/10px montserrat;
+}
+.sitestuff-bar .site-userr .site-usericon:after {
+  content: "";
+  top: 2px;
+  right: -4px;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border: 1px solid rgba(var(--maing1), 1);
+}
+.sitestuff-bar .site-userr .site-usericon:before {
+  content: "";
+  top: 3px;
+  right: -5px;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  transform: rotate(45deg);
+  border: 1px solid rgba(var(--maing1), 1);
+}
+.sitestuff-bar .site-userr .site-usericon {
+  filter: drop-shadow(0px 0px 10px rgba(var(--maing1), 0.9));
+  position: relative;
+  right: 5px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.sitestuff-bar .site-userr .site-usericon img {
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+}
+.sitestuff-bar .site-links {
+  height: 150px;
+  width: 350px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sitestuff-bar .site-links a:hover {
+  color: var(--main1);
+  border: 1px solid var(--main1);
+}
+.sitestuff-bar .site-links a {
+  cursor: crosshair;
+  transition: 0.4s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+  width: 130px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 100px;
+  font: 700 14px open sans;
+  letter-spacing: 1px;
+  background: var(--dark);
+  border-radius: 8px;
+  border: 1px solid var(--border1);
+}
+.sitestuff-bar .site-updates span {
+  display: block;
+  height: 120px;
+  width: 340px;
+  overflow: auto;
+}
+.sitestuff-bar .site-updates span::-webkit-scrollbar {
+  width: 5px;
+}
+.sitestuff-bar .site-updates span::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+.sitestuff-bar .site-updates span::-webkit-scrollbar-thumb {
+  border: 2px solid var(--dark);
+  background: var(--main1);
+}
+.sitestuff-bar .site-updates {
+  height: 120px;
+  width: 340px;
+  padding: 20px;
+  background: var(--dark);
+  border-radius: 8px;
+  font: 500 12px/200% open sans;
+  border: 1px solid var(--border1);
+}
+.sitestuff-bar .site-updates b {
+  text-transform: uppercase;
+  color: var(--main1);
+  font: 900 16px montserrat;
+}
+
+.userinter-top {
+  margin-top: -76px;
+  position: sticky;
+  top: 45px;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid var(--border1);
+  background-color: var(--dark1);
+  background-image: radial-gradient(
+    circle at top left,
+    var(--dark1) 0%,
+    rgba(var(--maing1), 0.8) 600%
+  );
+  height: 60px;
+  width: 100%;
+}
+.userinter-top .userinter-left {
+  width: 50%;
+  height: 60px;
+  margin-left: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.userinter-top .userinter-left .forminput,
+.userinter-top .userinter-left a {
+  text-align: center !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font: 500 14px ubuntu mono;
+  color: var(--light2);
+  text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 6px;
+  border: 1px solid var(--dark);
+  background: var(--dark2);
+}
+.userinter-top .userinter-right {
+  margin-right: 30px;
+  width: 50%;
+  height: 60px;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.userinter-top .userinter-right h1 {
+  margin-top: 15px;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--light2);
+  font: 700 12px ubuntu mono;
+}
+.userinter-top .userinter-right h1 b {
+  display: block;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+  color: var(--main1);
+  font: 900 25px var(--bonia);
+}
+.userinter-top .userinter-right img {
+  width: 40px;
+  height: 40px;
+  border: 5px solid var(--dark1);
+}
+
+/* categories */
+
+.cat-wrap {
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.67);
+  background: var(--dark1);
+  border: 1px solid var(--border1);
+
+}
+
+/*----- 【 MUSIC PLAYER #08 by @glenthemes 】 -----*/
+[glenplayer08]{
+	
+	/*-- player position --*/
+	--MusicPlayer-Position: "bottom left";
+	--MusicPlayer-Corner-Offset: 50px;
+	
+	/*-- album image --*/
+	--MusicPlayer-Album-Image-Size: 54px;
+	--MusicPlayer-Album-Image-Corner-Roundness: 3px;
+	
+	/*-- player buttons (play/pause) --*/
+	--MusicPlayer-Buttons-Size: 31px;
+	--MusicPlayer-Buttons-Color: #ddd;
+	--MusicPlayer-Buttons-Padding: 8px;
+	--MusicPlayer-Buttons-Border-Size: 1px;
+	--MusicPlayer-Buttons-Border-Color: #bbb;
+	--MusicPlayer-Buttons-Background: #000000;
+	--MusicPlayer-Buttons-Background-Transparency: 45%;
+	--MusicPlayer-Buttons-Background-Blur: 3px;
+	
+	/*-- player song name --*/
+	--MusicPlayer-Song-Name-Size: 12px;
+	--MusicPlayer-Song-Name-Color: #222;
+	
+	/*-- player artist name --*/
+	--MusicPlayer-Artist-Name-Size: 12px;
+	--MusicPlayer-Artist-Name-Color: #777;
+	
+	/*-- player gap/spacing --*/
+	--MusicPlayer-Center-Gap: 14px;
+	--MusicPlayer-Text-Line-Spacing: 4px;
+	
+	/*-- playback settings --*/
+	--MusicPlayer-Autoplay: "no";
+	--MusicPlayer-Replay: "no";
+	
+}/* don't delete this line */
+/*---- END MUSIC PLAYER ----*/
